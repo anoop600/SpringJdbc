@@ -12,7 +12,7 @@ import com.mindtree.springJdbcDemo.service.serviceImpl.EmployeeServiceImpl;
 
 public class App {
 	public static void main(String[] args) {
-		// EmployeeService employeeService = new EmployeeServiceImpl();
+		 EmployeeService employeeService = new EmployeeServiceImpl();
 		ApplicationContext contextEntity = new ClassPathXmlApplicationContext(
 				"com\\mindtree\\springJdbcDemo\\util\\EntityBean.xml");
 
@@ -34,25 +34,25 @@ public class App {
 		emp.setSecurityQuestion("Qest");
 		emp.setSecurityAnswer("Ans");
 
-		// System.out.println(emp);
+		 System.out.println(emp);
 
 		employeeService.create(emp);
 
 		// Read//
-		// System.out.println(employeeService.read(10));
+		 System.out.println(employeeService.read(10));
 
 		// Delete
 
-		// System.out.println(employeeService.delete(5));
+		 System.out.println(employeeService.delete(5));
 
 		// Get all
-		// employeeService.getAllEmployee().forEach(System.out::println);
+		 employeeService.getAllEmployee().forEach(System.out::println);
 
 		// Update
 
-		/*
-		 * Employee employee = new Employee(); employee.setEmpId(12);
-		 * employee.setEmailid("hi@hi"); employeeService.update(employee);
-		 */
+		
+		 Employee employee = new Employee(); employee.setEmpId(12);
+		 employee.setEmailid("hi@hi"); employeeService.update(employee);
+		
 	}
 }
