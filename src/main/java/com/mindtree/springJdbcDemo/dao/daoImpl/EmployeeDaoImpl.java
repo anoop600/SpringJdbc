@@ -82,5 +82,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		String sql = "update employee set email=? where id=?";
 		return jdbcTemplate.update(sql, employee.getEmailid(), employee.getEmpId());
 	}
-
+	public display data(){
+		System.out.println("HEllo");
+	}
 }
